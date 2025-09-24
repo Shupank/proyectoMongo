@@ -1,8 +1,20 @@
 const express = require('express');
-const router = express.Router();
-const categoryController = require('../controllers/categoryController');
+const {
+  getCategories,
+  createCategory,
+  updateCategory,
+  deleteCategory,
+} = require('../controllers/categoryController');
+const protect = require('../middleware/authMiddleware');
 
-router.post('/', categoryController.createCategory);
-router.get('/', categoryController.getCategories);
+const router = express.Router();
+
+// Rutas públicas
+router.get('/', getCategories);
+
+// Rutas protegidas
+router.post('/', protect, createCategory);
+router.put('/:id', protect, updateCategory);
+router.delete('/:id', protect, deleteCategory);
 
 module.exports = router;

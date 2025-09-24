@@ -1,20 +1,23 @@
 {
-  "name": "tp-api-crud",
+  "name": "proyecto-crud-mongodb",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "API CRUD con Node.js y MongoDB para gestionar productos, usuarios y categorías.",
+  "main": "app.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "start": "node app.js",
+  "dev": "nodemon app.js"
+},
+  "keywords": [], 
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "bcryptjs": "^3.0.2",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
-    "express": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.18.1"
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.2"
   }
 }
